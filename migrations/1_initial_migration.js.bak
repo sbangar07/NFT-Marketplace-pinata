@@ -1,0 +1,12 @@
+const Migrations = artifacts.require("Migrations");
+
+module.exports = function (deployer) {
+  const MyAddress = "0xe63c1C7868D0D38A4fE9c2d44d57D2d72cf9196f";
+  //deployer.deploy(MyContract, MyAddress);
+  deployer.deploy(Migrations, MyAddress);
+};
+
+// module.exports = async function (deployer, network, accounts) {
+//   const deployerAddress = accounts[0];
+//   await deployer.deploy(Migrations, deployerAddress);
+// };
